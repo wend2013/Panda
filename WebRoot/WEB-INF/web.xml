@@ -9,4 +9,13 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  
+  <servlet>
+      <servlet-name>BaseWS</servlet-name>
+      <servlet-class>com.wendongwei.panda.BaseWS</servlet-class>
+    </servlet>
+  <servlet-mapping>
+        <servlet-name>BaseWS</servlet-name>
+        <url-pattern>/Servlets/BaseWS</url-pattern>
+    </servlet-mapping>
 </web-app>
