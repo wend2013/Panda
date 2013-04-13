@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">  
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">  
+      
+     
+  
+  
+    <appender name="console" class="org.apache.log4j.ConsoleAppender">
+        <layout class="org.apache.log4j.PatternLayout">  
+            <param name="ConversionPattern"  
+                value="%d %-5p %m %n" />  
+        </layout>  
+    </appender>  
+  
+    <appender name="file"  
+        class="org.apache.log4j.DailyRollingFileAppender">  
+        <param name="File" value="Panda.log" />  
+        <param name="Threshold" value="WARN" />  
+        <param name="DatePattern" value="'.'yyyy-MM-dd'.log'" />  
+        <layout class="org.apache.log4j.PatternLayout">  
+            <param name="ConversionPattern" value="%d %-5p %m %n" />  
+        </layout>  
+    </appender>  
+              
+    <!-- 类似定义logger节点打印具体类，或某包中的指定级别以上日志 -->  
+<!--     <logger name="com.wendongwei.repository.test">   -->
+<!--         <level value="debug" />   -->
+<!--         <appender-ref ref="console" /> -->
+<!--     </logger>   -->
+          
+        <category name="com.wendongwei.panda">  
+             <priority value="debug"/>
+             <appender-ref ref="console" />
+        </category> 
+<!--     <root>   -->
+<!--         <priority value="INFO" />   -->
+<!--         <appender-ref ref="console" />   -->
+<!--         <appender-ref ref="file" />   -->
+<!--     </root>   -->
+</log4j:configuration> 

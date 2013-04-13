@@ -1,0 +1,18 @@
+<Context debug="0">  
+<Resource name="jdbc/MyDataSource" auth="Container" 
+    type="javax.sql.DataSource"  
+    driverClassName="com.mysql.jdbc.Driver"  
+    url="jdbc:mysql://j05.netjsp.com:3310/xa00022?autoReconnect=true&amp;useUnicode=true&amp;characterEncoding=utf-8&amp;mysqlEncoding=utf8"  
+    username="xa00022"  
+    password="bnpP951753"  
+    maxActive="20"  
+    maxIdle="3"  
+    removeAbandoned="true"  
+    maxWait="3000" />  
+    <!-- If you want e-mail features, un-comment the section below -->  
+    <!--  
+    <Resource name="mail/Session" auth="Container"  
+        type="javax.mail.Session"  
+        mail.smtp.host="mailhost.example.com" />  
+    -->  
+</Context>  
